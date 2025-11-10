@@ -7,12 +7,12 @@ const BLUE = '#3B82F6'; // bright blue
 const HeroSection = () => {
   return (
     <section className="relative min-h-[70vh] w-full overflow-hidden bg-white dark:bg-[#0b0b12]">
-      {/* 3D Scene with new background and effect */}
+      {/* 3D Scene with Spline (full size) */}
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/0lw9g1AXk-MP2eiO/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <Spline scene="https://prod.spline.design/igThmltzmqv5hkWo/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
-      {/* New gradient overlay (non-blocking) */}
+      {/* Non-blocking gradient overlay to improve contrast */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-transparent via-[#0b0b12]/40 to-[#0b0b12] dark:from-transparent dark:via-[#0b0b12]/50 dark:to-[#0b0b12]" />
 
       {/* Content */}
