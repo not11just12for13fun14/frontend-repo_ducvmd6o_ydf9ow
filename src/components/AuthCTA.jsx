@@ -11,8 +11,8 @@ const Input = ({ icon: Icon, type = 'text', placeholder }) => (
     <input
       type={type}
       placeholder={placeholder}
-      className="w-full rounded-lg border bg-white py-3 pl-10 pr-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 dark:border-gray-700 dark:bg-[#0f0f17] dark:text-white"
-      style={{ borderColor: '#E5E7EB', boxShadow: `0 0 0 0 rgba(0,0,0,0)`, outlineColor: BLUE }}
+      className="w-full rounded-lg border bg-[#11131a] py-3 pl-10 pr-3 text-sm text-white placeholder:text-gray-400 focus:outline-none focus:ring-2"
+      style={{ borderColor: '#1f2430', boxShadow: `0 0 0 0 rgba(0,0,0,0)`, outlineColor: BLUE }}
     />
   </div>
 );
@@ -33,7 +33,8 @@ const AuthCTA = () => {
           </ul>
         </div>
 
-        <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-[#0f0f17]">
+        {/* Auth card with white font */}
+        <div className="rounded-2xl border border-[#1f2430] bg-[#0f0f17] p-6 text-white shadow-sm">
           <div className="grid grid-cols-1 gap-4">
             <Input icon={Mail} placeholder="Email" type="email" />
             <Input icon={Lock} placeholder="Password" type="password" />
@@ -45,20 +46,20 @@ const AuthCTA = () => {
                 <LogIn size={16} /> Login
               </button>
               <button
-                className="inline-flex w-full items-center justify-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-semibold hover:bg-blue-50 dark:hover:bg-blue-950"
-                style={{ borderColor: BLUE, color: BLUE }}
+                className="inline-flex w-full items-center justify-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-semibold hover:bg-blue-950/40"
+                style={{ borderColor: BLUE, color: 'white' }}
               >
                 <UserPlus size={16} /> Sign up
               </button>
             </div>
             <button
-              className="inline-flex w-full items-center justify-center gap-2 rounded-lg border bg-white px-4 py-2.5 text-sm font-semibold hover:bg-blue-50 dark:border-gray-700 dark:bg-[#0f0f17] dark:text-white dark:hover:bg-blue-950"
-              style={{ borderColor: BLUE, color: '#0f172a' }}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-lg border bg-[#11131a] px-4 py-2.5 text-sm font-semibold hover:bg-blue-950/40"
+              style={{ borderColor: BLUE, color: 'white' }}
             >
               <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" className="h-4 w-4" />
               Continue with Google
             </button>
-            <div className="flex items-center justify-between text-xs text-gray-500">
+            <div className="flex items-center justify-between text-xs text-gray-300">
               <a href="#" className="hover:underline" style={{ color: BLUE }}>Forgot password?</a>
               <a href="#" className="hover:underline" style={{ color: BLUE }}>Resend verification</a>
             </div>

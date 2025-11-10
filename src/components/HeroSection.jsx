@@ -7,13 +7,13 @@ const BLUE = '#3B82F6'; // bright blue
 const HeroSection = () => {
   return (
     <section className="relative min-h-[70vh] w-full overflow-hidden bg-white dark:bg-[#0b0b12]">
-      {/* 3D Scene */}
+      {/* 3D Scene with new background and effect */}
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/qQUip0dJPqrrPryE/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <Spline scene="https://prod.spline.design/0lw9g1AXk-MP2eiO/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
-      {/* Gradient overlay (non-blocking) */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/60 via-white/70 to-white dark:from-[#0b0b12]/40 dark:via-[#0b0b12]/70 dark:to-[#0b0b12]" />
+      {/* New gradient overlay (non-blocking) */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-transparent via-[#0b0b12]/40 to-[#0b0b12] dark:from-transparent dark:via-[#0b0b12]/50 dark:to-[#0b0b12]" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 pt-16 pb-12 text-center sm:pt-24 lg:pt-32">
@@ -36,7 +36,7 @@ const HeroSection = () => {
           <a
             href="#auth"
             className="group inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-white shadow hover:opacity-95 focus:outline-none focus:ring-2"
-            style={{ backgroundColor: BLUE, focusRingColor: `${BLUE}66` }}
+            style={{ backgroundColor: BLUE }}
           >
             Get Started
             <ArrowRight className="transition-transform group-hover:translate-x-0.5" size={18} />
