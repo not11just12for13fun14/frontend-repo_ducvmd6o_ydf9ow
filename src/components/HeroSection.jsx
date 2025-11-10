@@ -2,6 +2,8 @@ import React from 'react';
 import Spline from '@splinetool/react-spline';
 import { Rocket, ArrowRight } from 'lucide-react';
 
+const BLUE = '#3B82F6'; // bright blue
+
 const HeroSection = () => {
   return (
     <section className="relative min-h-[70vh] w-full overflow-hidden bg-white dark:bg-[#0b0b12]">
@@ -15,14 +17,11 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 pt-16 pb-12 text-center sm:pt-24 lg:pt-32">
-        <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary" style={{
-          // Tailwind color shortcut – primary = #370044 from brief
-          // Apply via inline style for brand accuracy
-          color: '#370044',
-          borderColor: '#37004433',
-          backgroundColor: '#3700440D',
-        }}>
-          <Rocket size={14} />
+        <span
+          className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium"
+          style={{ color: BLUE, borderColor: `${BLUE}33`, backgroundColor: `${BLUE}0D` }}
+        >
+          <Rocket size={14} style={{ color: BLUE }} />
           AI-Powered Expense Manager
         </span>
 
@@ -36,14 +35,16 @@ const HeroSection = () => {
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
           <a
             href="#auth"
-            className="group inline-flex items-center justify-center gap-2 rounded-lg bg-[#370044] px-5 py-3 text-sm font-semibold text-white shadow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-[#370044]/40"
+            className="group inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-white shadow hover:opacity-95 focus:outline-none focus:ring-2"
+            style={{ backgroundColor: BLUE, focusRingColor: `${BLUE}66` }}
           >
             Get Started
             <ArrowRight className="transition-transform group-hover:translate-x-0.5" size={18} />
           </a>
           <a
             href="#features"
-            className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-900 hover:bg-gray-50 dark:border-gray-700 dark:text-white dark:hover:bg-white/5"
+            className="inline-flex items-center justify-center gap-2 rounded-lg border px-5 py-3 text-sm font-semibold hover:bg-blue-50 dark:hover:bg-blue-950"
+            style={{ borderColor: BLUE, color: BLUE }}
           >
             Explore Features
           </a>

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Upload, Sparkles, FileSpreadsheet, BarChart3, Shield, Layers } from 'lucide-react';
 
+const BLUE = '#3B82F6'; // bright blue
+
 const features = [
   {
     icon: Upload,
@@ -45,9 +47,9 @@ const FeatureGrid = () => {
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md dark:border-gray-800 dark:bg-[#0f0f17]">
+            <div key={title} className="rounded-2xl border bg-white p-6 shadow-sm transition hover:shadow-md dark:border-gray-800 dark:bg-[#0f0f17]" style={{ borderColor: '#E5E7EB' }}>
               <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg" style={{ backgroundColor: '#3700440F', color: '#370044' }}>
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg" style={{ backgroundColor: `${BLUE}1A`, color: BLUE }}>
                   <Icon size={18} />
                 </span>
                 <h3 className="text-base font-semibold text-gray-900 dark:text-white">{title}</h3>
