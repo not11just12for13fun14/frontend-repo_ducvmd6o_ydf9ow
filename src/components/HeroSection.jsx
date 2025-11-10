@@ -55,6 +55,93 @@ const HeroSection = () => {
             Explore Features
           </a>
         </div>
+
+        {/* Laptop mockup showing an accounting tracker */}
+        <div className="pointer-events-none mt-12 w-full max-w-5xl">
+          <div className="mx-auto rounded-xl border border-white/10 bg-gradient-to-b from-white/60 to-white/20 p-2 shadow-2xl backdrop-blur-md dark:from-white/10 dark:to-white/5">
+            {/* Screen */}
+            <div className="rounded-lg border border-black/5 bg-white p-4 dark:border-white/10 dark:bg-[#0f0f17]">
+              {/* Window controls */}
+              <div className="mb-4 flex items-center gap-2">
+                <span className="h-3 w-3 rounded-full bg-red-400/80" />
+                <span className="h-3 w-3 rounded-full bg-yellow-400/80" />
+                <span className="h-3 w-3 rounded-full bg-green-400/80" />
+                <span className="ml-auto rounded-full px-2 py-0.5 text-[10px] font-medium text-gray-500 dark:text-gray-400">
+                  Trakify — Accounting
+                </span>
+              </div>
+
+              <div className="grid grid-cols-12 gap-4">
+                {/* Sidebar */}
+                <aside className="col-span-3 space-y-2">
+                  {['Dashboard', 'Transactions', 'Vendors', 'Reports', 'Sheets Sync'].map((item, i) => (
+                    <div
+                      key={item}
+                      className={`rounded-md border px-3 py-2 text-sm ${i === 0 ? 'border-blue-500/30 bg-blue-500/10 text-blue-500' : 'border-white/10 text-gray-600 dark:text-gray-300'}`}
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </aside>
+
+                {/* Main content */}
+                <main className="col-span-9 space-y-4">
+                  {/* KPI cards */}
+                  <div className="grid grid-cols-3 gap-3">
+                    {[
+                      { label: 'Total Spend', value: '$12,450', delta: '+8%' },
+                      { label: 'This Month', value: '$2,130', delta: '+3%' },
+                      { label: 'Uncategorized', value: '$184', delta: '-12%' },
+                    ].map((k) => (
+                      <div key={k.label} className="rounded-lg border border-white/10 bg-gradient-to-b from-white/40 to-white/10 p-3 dark:from-white/5 dark:to-transparent">
+                        <div className="text-xs text-gray-500 dark:text-gray-400">{k.label}</div>
+                        <div className="mt-1 text-lg font-semibold text-gray-900 dark:text-white">{k.value}</div>
+                        <div className="text-[11px] text-emerald-500">{k.delta}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Chart + Table */}
+                  <div className="grid grid-cols-12 gap-4">
+                    <div className="col-span-5 rounded-lg border border-white/10 p-3">
+                      <div className="mb-2 text-xs text-gray-500 dark:text-gray-400">Spending by Category</div>
+                      <div className="flex h-28 items-end gap-2">
+                        {[40, 72, 55, 90, 60].map((h, i) => (
+                          <div
+                            key={i}
+                            className="w-6 rounded-t bg-gradient-to-t from-blue-500 to-blue-400"
+                            style={{ height: `${h}%` }}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <div className="col-span-7 rounded-lg border border-white/10 p-3">
+                      <div className="mb-2 text-xs text-gray-500 dark:text-gray-400">Recent Transactions</div>
+                      <div className="divide-y divide-white/10 text-xs">
+                        {[
+                          ['2025-02-01', 'Starbucks', '$4.80', 'Meals'],
+                          ['2025-02-01', 'Uber', '$18.60', 'Travel'],
+                          ['2025-02-02', 'Office Depot', '$64.12', 'Supplies'],
+                          ['2025-02-03', 'AWS', '$215.00', 'Cloud'],
+                        ].map((row, i) => (
+                          <div key={i} className="grid grid-cols-4 gap-2 py-2 text-gray-700 dark:text-gray-300">
+                            <div>{row[0]}</div>
+                            <div>{row[1]}</div>
+                            <div className="text-right">{row[2]}</div>
+                            <div className="text-right text-gray-500">{row[3]}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </main>
+              </div>
+            </div>
+
+            {/* Base/keyboard hint */}
+            <div className="mx-auto mt-2 h-2 w-2/3 rounded-b-xl bg-gradient-to-b from-white/70 to-white/20 dark:from-white/10 dark:to-white/5" />
+          </div>
+        </div>
       </div>
     </section>
   );
